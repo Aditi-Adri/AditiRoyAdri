@@ -998,7 +998,7 @@ nav{
 
 .avatar{
   width:100%;height:280px;border-radius:6px;
-  background:url('https://i.imgur.com/7k8QG2t.png') center/cover no-repeat;
+  background:url('profile.jpg') center/cover no-repeat;
   border: 2px solid var(--neon-blue);
   box-shadow: var(--blue-glow);
   position: relative;
@@ -1823,7 +1823,7 @@ header.scrolled .logo-sq {
 /* Loading state and performance optimization */
 .hero-card .avatar {
   width:100%;height:280px;border-radius:6px;
-  background:url('https://i.imgur.com/7k8QG2t.png') center/cover no-repeat, 
+  background:url('profile.jpg') center/cover no-repeat, 
              linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
   border: 2px solid var(--neon-blue);
   box-shadow: var(--blue-glow);
