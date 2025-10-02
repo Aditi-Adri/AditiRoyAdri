@@ -15,6 +15,7 @@
     rgba(0,0,0,0.95) 0%, 
     rgba(0,10,20,0.9) 50%, 
     rgba(0,0,0,0.95) 100%
+                              
   );
   z-index: 1000;
   pointer-events: none;
@@ -2528,4 +2529,5 @@ img {
     animation: none !important;
   }
 }
+
 
