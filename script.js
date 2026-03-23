@@ -639,4 +639,43 @@
     subtree: true
   });
 
+  /*************************
+   * Carousel Navigation
+   *************************/
+  function initCarousels() {
+    const carousels = document.querySelectorAll('.carousel-wrapper');
+    
+    carousels.forEach(wrapper => {
+      const track = wrapper.querySelector('.carousel-track');
+      const prevBtn = wrapper.querySelector('.carousel-control.prev');
+      const nextBtn = wrapper.querySelector('.carousel-control.next');
+      
+      if (!track || !prevBtn || !nextBtn) return;
+      
+      const getScrollAmount = () => {
+         const card = track.querySelector('.card');
+         // card width + gap (1.5rem = 24px)
+         return card ? card.offsetWidth + 24 : 344;
+      };
+
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent modal opening if click bubbles
+        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+      
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+    });
+  }
+  
+  // Init carousels
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousels);
+  } else {
+    initCarousels();
+  }
+
+
 })();
