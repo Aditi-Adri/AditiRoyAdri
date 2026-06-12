@@ -1,9 +1,9 @@
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   ADITI ROY ADRI â€” Portfolio v3
+﻿/* ════════════════════════════════════════════════════════
+   ADITI ROY ADRI — Portfolio v3
    Top-nav layout | Dark/light | Violet accent
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 
-/* â”€â”€ Theme variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Theme variables ──────────────────────────────────── */
 :root, [data-theme="dark"] {
   --bg:          #080812;
   --bg-2:        #0e0e1c;
@@ -44,7 +44,7 @@
 [data-theme="light"] .icon-moon { display: none; }
 [data-theme="light"] .icon-sun  { display: block; }
 
-/* â”€â”€ Smooth theme transition â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Smooth theme transition ──────────────────────────── */
 html {
   transition: background-color .3s ease;
 }
@@ -57,7 +57,7 @@ html {
   padding: 0;
 }
 
-/* targeted transition â€” avoids breaking hover/animation states */
+/* targeted transition — avoids breaking hover/animation states */
 body,
 .topnav,
 .section,
@@ -81,7 +81,7 @@ body,
     box-shadow       .3s ease;
 }
 
-/* â”€â”€ Reset & base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Reset & base ─────────────────────────────────────── */
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--bg);
@@ -107,7 +107,7 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* â”€â”€ Spotlight cursor glow â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Spotlight cursor glow ────────────────────────────── */
 #spotlight {
   --mx: 50%;
   --my: 50%;
@@ -122,9 +122,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   );
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ════════════════════════════════════════════════════════
    TOP NAV
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 .topnav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -311,9 +311,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mobile-link:last-child { border-bottom: none; }
 .mobile-link:hover { color: var(--accent); background: var(--accent-dim); }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ════════════════════════════════════════════════════════
    MAIN / LAYOUT
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 #main {
   position: relative;
   z-index: 1;
@@ -326,9 +326,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 0 2rem 6rem;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ════════════════════════════════════════════════════════
    HERO
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 .hero {
   max-width: 1100px;
   margin: 0 auto;
@@ -450,9 +450,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: block;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ════════════════════════════════════════════════════════
    SECTIONS
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 .section {
   padding: 4rem 0;
   border-top: 1px solid var(--border);
@@ -468,7 +468,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 2rem;
 }
 
-/* â”€â”€ About â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── About ──────────────────────────────────────────────── */
 .about-body {
   display: flex;
   flex-direction: column;
@@ -519,7 +519,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 500;
 }
 
-/* â”€â”€ Education â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Education ──────────────────────────────────────────── */
 .edu-card {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -571,7 +571,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: .75rem;
 }
 
-/* â”€â”€ Tags / pills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Tags / pills ───────────────────────────────────────── */
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -590,7 +590,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .03em;
 }
 
-/* â”€â”€ Skills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Skills ────────────────────────────────────────────── */
 .skills-list {
   display: flex;
   flex-direction: column;
@@ -606,7 +606,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: .65rem;
 }
 
-/* â”€â”€ Featured Projects â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Featured Projects ──────────────────────────────────── */
 .featured-list {
   display: flex;
   flex-direction: column;
@@ -713,7 +713,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-color: var(--accent);
 }
 
-/* â”€â”€ Other Projects Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Other Projects Grid ───────────────────────────────── */
 .other-heading {
   font-size: .72rem;
   font-weight: 700;
@@ -792,7 +792,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: .65rem;
 }
 
-/* â”€â”€ Contact â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Contact ────────────────────────────────────────────── */
 .contact-body {
   display: flex;
   flex-direction: column;
@@ -879,7 +879,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: translateY(-2px);
 }
 
-/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   position: relative;
   z-index: 1;
@@ -891,7 +891,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .04em;
 }
 
-/* â”€â”€ Back to top â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Back to top ─────────────────────────────────────────── */
 .to-top {
   position: fixed;
   bottom: 2rem;
@@ -924,7 +924,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-color: var(--accent);
 }
 
-/* â”€â”€ Fade-in animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Fade-in animations ──────────────────────────────────── */
 .fade-item {
   opacity: 0;
   transform: translateY(20px);
@@ -936,9 +936,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: none;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RESPONSIVE â€” MOBILE
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE
+   ════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .topnav-links,
   .topnav-actions { display: none; }
@@ -999,11 +999,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-photo-wrap { width: 180px; height: 180px; }
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ════════════════════════════════════════════════════════
    CURSOR HIGHLIGHT RING  (mouse devices only)
    Invisible by default; glows violet when hovering links,
    cards, social icons, and other interactive elements.
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ════════════════════════════════════════════════════════ */
 .cursor-ring {
   position: fixed;
   width: 38px;

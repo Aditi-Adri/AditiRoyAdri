@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   var html       = document.documentElement;
@@ -9,7 +9,7 @@
   var toTop      = document.getElementById('to-top');
   var cursorRing = document.getElementById('cursor-ring');
 
-  // â”€â”€ Theme toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Theme toggle ─────────────────────────────────────
   var saved = localStorage.getItem('ara-theme') || 'dark';
   html.setAttribute('data-theme', saved);
 
@@ -19,7 +19,7 @@
     localStorage.setItem('ara-theme', next);
   });
 
-  // â”€â”€ Hamburger / mobile menu â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Hamburger / mobile menu ───────────────────────────
   hamburger.addEventListener('click', function () {
     var open = mobileMenu.classList.toggle('open');
     hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -35,7 +35,7 @@
     });
   });
 
-  // â”€â”€ Cursor highlight ring â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Cursor highlight ring ─────────────────────────────
   // Ring tracks mouse and glows violet only over interactive elements.
   // Native cursor is untouched everywhere.
   var INTERACTIVE = 'a, button, .featured-card, .other-card, .social-icon, .icon-link, .contact-social-btn, .contact-email, .archive-link, .nav-item, .mobile-link, .theme-toggle, .cv-btn, .to-top';
@@ -55,13 +55,13 @@
     });
   }
 
-  // â”€â”€ Spotlight effect â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Spotlight effect ──────────────────────────────────
   document.addEventListener('mousemove', function (e) {
     spotlight.style.setProperty('--mx', e.clientX + 'px');
     spotlight.style.setProperty('--my', e.clientY + 'px');
   }, { passive: true });
 
-  // â”€â”€ Scroll-spy: highlight active nav item â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Scroll-spy: highlight active nav item ─────────────
   var sections = Array.from(document.querySelectorAll('section[id]'));
   var navItems = Array.from(document.querySelectorAll('.nav-item[data-section]'));
 
@@ -78,7 +78,7 @@
 
   sections.forEach(function (s) { spyObserver.observe(s); });
 
-  // â”€â”€ Smooth scroll for anchor links â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Smooth scroll for anchor links ───────────────────
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var href = this.getAttribute('href');
@@ -97,7 +97,7 @@
     });
   });
 
-  // â”€â”€ Back to top button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Back to top button ────────────────────────────────
   window.addEventListener('scroll', function () {
     toTop.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
@@ -106,7 +106,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // â”€â”€ Topnav shadow on scroll â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Topnav shadow on scroll ───────────────────────────
   var topnav = document.getElementById('topnav');
   window.addEventListener('scroll', function () {
     topnav.style.boxShadow = window.scrollY > 10
@@ -114,7 +114,7 @@
       : 'none';
   }, { passive: true });
 
-  // â”€â”€ Fade-in on scroll â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Fade-in on scroll ─────────────────────────────────
   var fadeEls = Array.from(document.querySelectorAll(
     '.featured-card, .other-card, .edu-card, .about-stats, .skill-group, .contact-body'
   ));
