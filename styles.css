@@ -1031,3 +1031,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (pointer: coarse) {
   .cursor-ring { display: none; }
 }
+
+/* ── See More projects ──────────────────────────────────────── */
+.fc-hidden { display: none !important; }
+
+.see-more-btn {
+  display: block;
+  width: fit-content;
+  margin: 2.5rem auto 0;
+  padding: 0.7rem 2.4rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.see-more-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
