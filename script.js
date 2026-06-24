@@ -140,7 +140,12 @@
     var PER_PAGE = 4;
     if (allCards.length > PER_PAGE) {
       var shownCount = PER_PAGE;
-      allCards.slice(PER_PAGE).forEach(function (c) { c.classList.add('fc-hidden'); });
+      // Hide cards beyond first 4; remove fade-item so opacity doesn't conflict
+      allCards.slice(PER_PAGE).forEach(function (c) {
+        c.classList.add('fc-hidden');
+        c.classList.remove('fade-item');
+        fadeObserver.unobserve(c);
+      });
 
       var seeMoreBtn = document.createElement('button');
       seeMoreBtn.className = 'see-more-btn';
@@ -150,14 +155,8 @@
       seeMoreBtn.addEventListener('click', function () {
         var end = Math.min(shownCount + PER_PAGE, allCards.length);
         for (var i = shownCount; i < end; i++) {
-          (function (card) {
-            card.classList.remove('fc-hidden');
-            requestAnimationFrame(function () {
-              requestAnimationFrame(function () {
-                card.classList.add('visible');
-              });
-            });
-          })(allCards[i]);
+          allCards[i].classList.remove('fc-hidden');
+          allCards[i].classList.add('fc-reveal');
         }
         shownCount = end;
         if (shownCount >= allCards.length) {

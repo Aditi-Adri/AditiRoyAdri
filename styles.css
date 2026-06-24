@@ -1035,6 +1035,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── See More projects ──────────────────────────────────────── */
 .fc-hidden { display: none !important; }
 
+@keyframes fcFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fc-reveal { animation: fcFadeUp 0.45s ease forwards; }
+
 .see-more-btn {
   display: block;
   width: fit-content;
