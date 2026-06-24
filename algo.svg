@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a1e"/><stop offset="1" stop-color="#0d1033"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="160" fill="url(#bg)"/>
+  <rect x="28" y="44" width="92" height="7" rx="3" fill="#a78bfa" opacity="0.7"/>
+  <rect x="44" y="57" width="118" height="7" rx="3" fill="#818cf8" opacity="0.5"/>
+  <rect x="44" y="70" width="100" height="7" rx="3" fill="#818cf8" opacity="0.45"/>
+  <rect x="28" y="83" width="82" height="7" rx="3" fill="#a78bfa" opacity="0.6"/>
+  <rect x="44" y="96" width="128" height="7" rx="3" fill="#818cf8" opacity="0.4"/>
+  <rect x="28" y="109" width="72" height="7" rx="3" fill="#a78bfa" opacity="0.5"/>
+  <rect x="28" y="44" width="28" height="7" rx="3" fill="#c4b5fd" opacity="0.95"/>
+  <text x="42" y="50" font-family="monospace" font-size="7" text-anchor="middle" fill="#030318">def</text>
+  <rect x="28" y="83" width="24" height="7" rx="3" fill="#c4b5fd" opacity="0.95"/>
+  <text x="40" y="89" font-family="monospace" font-size="7" text-anchor="middle" fill="#030318">for</text>
+  <rect x="188" y="48" width="68" height="56" rx="6" fill="rgba(167,139,250,0.07)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="222" y="70" font-family="monospace" font-size="12" text-anchor="middle" fill="#a78bfa" font-weight="bold">O(n)</text>
+  <text x="222" y="86" font-family="monospace" font-size="10" text-anchor="middle" fill="#818cf8">O(logn)</text>
+  <text x="222" y="100" font-family="monospace" font-size="9" text-anchor="middle" fill="#4e5668">O(n²)</text>
+  <text x="140" y="22" font-family="'Courier New',monospace" font-size="13" text-anchor="middle" fill="#a78bfa" font-weight="bold" letter-spacing="2">ALGORITHMS</text>
+  <rect x="70" y="133" width="56" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.7"/>
+  <rect x="134" y="133" width="76" height="16" rx="3" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.7"/>
+  <text x="98" y="145" font-family="monospace" font-size="9" text-anchor="middle" fill="#a78bfa">Python</text>
+  <text x="172" y="145" font-family="monospace" font-size="9" text-anchor="middle" fill="#818cf8">Codeforces</text>
+</svg>
