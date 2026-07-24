@@ -181,6 +181,12 @@ section {
 .project-links a::after { content: ' ↗'; font-size: 6.5pt; }
 .project-links a:first-child { margin-left: 0; }
 
+.project-date {
+  font-size: 8pt; color: #64748b;
+  font-style: italic; white-space: nowrap;
+  flex-shrink: 0; padding-left: 10pt;
+}
+
 .project-tech {
   font-size: 8pt; color: #64748b; margin: 1.5pt 0 2pt 0;
   font-style: italic;
@@ -234,22 +240,69 @@ section {
   a { color: #1e40af !important; }
   .project-entry  { page-break-inside: avoid !important; break-inside: avoid !important; }
   .edu-entry      { page-break-inside: avoid; break-inside: avoid; }
+  .no-print       { display: none !important; }
+}
+
+/* ===== On-screen action bar (hidden when printing) ===== */
+.cv-actions {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+.cv-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 15px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 9pt;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #1e40af;
+  background: #1e40af;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 14px rgba(30,64,175,.28);
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+.cv-action-btn:hover {
+  background: #1e3a8a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(30,64,175,.35);
+}
+.cv-action-btn.secondary {
+  background: #fff;
+  color: #1e40af;
+}
+.cv-action-btn.secondary:hover { background: #eff6ff; }
+@media (max-width: 640px) {
+  .cv-actions { top: 10px; right: 10px; gap: 6px; }
+  .cv-action-btn { padding: 8px 12px; font-size: 8.5pt; }
 }
 </style>
 </head>
 <body>
+
+<div class="cv-actions no-print">
+  <a href="index.html" class="cv-action-btn secondary">&#8592; Portfolio</a>
+  <a href="Aditi_Roy_Adri_CV.pdf" download class="cv-action-btn">&#8595; Download PDF</a>
+</div>
+
 <div class="page">
 
   <!-- ======== HEADER ======== -->
   <div class="cv-header">
     <h1>Aditi Roy Adri</h1>
-    <div class="subtitle">Computer Science &amp; Engineering — BRAC University, Dhaka</div>
     <div class="contacts">
-      <a href="mailto:aditi.roy.adri@g.bracu.ac.bd">aditi.roy.adri@g.bracu.ac.bd</a>
-      <span class="sep">|</span>
       <a href="mailto:aditiroyadri121@gmail.com">aditiroyadri121@gmail.com</a>
       <span class="sep">|</span>
       +880 1315841499
+      <span class="sep">|</span>
+      Dhaka, Bangladesh
       <br>
       <a href="https://www.linkedin.com/in/aditi-roy-adri-33b817323/">LinkedIn</a>
       <span class="sep">|</span>
@@ -276,11 +329,10 @@ section {
           <div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
           <div class="edu-badge">
             <span>CGPA: 3.84</span>
-            <span>Credits Completed: 120 / 136</span>
           </div>
         </div>
         <div class="edu-right">
-          <div class="edu-year">2022 — Present</div>
+          <div class="edu-year">2023 — 2026</div>
         </div>
       </div>
 
@@ -290,7 +342,7 @@ section {
           <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
           <div class="edu-gpa">GPA: 5.00</div>
         </div>
-        <div class="edu-right"><div class="edu-year">2019 — 2021</div></div>
+        <div class="edu-right"><div class="edu-year">2021</div></div>
       </div>
 
       <div class="edu-entry">
@@ -299,7 +351,7 @@ section {
           <div class="edu-degree">Secondary School Certificate (SSC)</div>
           <div class="edu-gpa">GPA: 5.00</div>
         </div>
-        <div class="edu-right"><div class="edu-year">2017 — 2019</div></div>
+        <div class="edu-right"><div class="edu-year">2019</div></div>
       </div>
 
     </div>
@@ -314,16 +366,20 @@ section {
         <td>Python, C++, C, Java, PHP, Assembly (Emu8086 / x86), Bash</td>
       </tr>
       <tr>
+        <td>Machine Learning &amp; Computer Vision</td>
+        <td>Deep Learning, CNNs, Image Segmentation, Object Detection, Transfer Learning, Model Evaluation, YOLO, U-Net</td>
+      </tr>
+      <tr>
         <td>Web Technologies</td>
         <td>HTML5, CSS3, JavaScript, React.js</td>
       </tr>
       <tr>
-        <td>ML &amp; Data Science</td>
+        <td>Libraries &amp; Frameworks</td>
         <td>PyTorch, NumPy, Pandas, Scikit-Learn, Matplotlib, Jupyter Notebook</td>
       </tr>
       <tr>
         <td>Databases</td>
-        <td>MySQL</td>
+        <td>MySQL, PostgreSQL</td>
       </tr>
       <tr>
         <td>Graphics &amp; Networking</td>
@@ -344,204 +400,73 @@ section {
   <section>
     <div class="section-title">Projects</div>
 
-    <!-- P1 -->
+    <!-- P1 · CARDD -->
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name-group">
+          <span class="project-name">CARDD — Car Damage Detection with YOLO</span>
+          <span class="project-links"><a href="https://github.com/Aditi-Adri/CARDD---Car-Damage-Detection-with-YOLO">GitHub</a></span>
+        </div>
+        <span class="project-date">Jun 2026</span>
+      </div>
+      <div class="project-tech">Python · YOLO11 · YOLOv8 · PyTorch · Object Detection · Computer Vision</div>
+      <div class="project-desc">Trained and benchmarked YOLO11-L against YOLOv8-L on the CarDD dataset — 4,000 images, 8,740 annotated boxes across 6 damage classes (scratches, dents, cracks, broken lamps, shattered glass, flat tires). YOLO11-L achieved <strong>mAP@50–95 of 0.557</strong>.</div>
+    </div>
+    <div class="project-divider"></div>
+
+    <!-- P2 · Pet Segmentation -->
     <div class="project-entry">
       <div class="project-top">
         <div class="project-name-group">
           <span class="project-name">Pet Image Segmentation &amp; Breed Classification (U-Net)</span>
+          <span class="project-links"><a href="https://github.com/Aditi-Adri/Image-Processing-Project---pet-segmentation-classification-unet-CSE428">GitHub</a></span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/Image-Processing-Project---pet-segmentation-classification-unet-CSE428">GitHub</a>
-        </div>
+        <span class="project-date">May 2026</span>
       </div>
       <div class="project-tech">Python · PyTorch · Jupyter Notebook · ResNet-34 · Oxford-IIIT Pet Dataset</div>
       <div class="project-desc">Built U-Net and Attention U-Net architectures for binary pet image segmentation and 37-breed classification. Achieved <strong>~88% IoU</strong> using a pretrained ResNet-34 encoder; from-scratch models reached ~80% IoU. Implemented data augmentation, combined segmentation + classification loss, and ablation studies.</div>
     </div>
     <div class="project-divider"></div>
 
-    <!-- P2 -->
+    <!-- P3 · SaveLife -->
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name-group">
+          <span class="project-name">SaveLife — SOS Emergency Response App</span>
+          <span class="project-links"><a href="https://github.com/Aditi-Adri/SaveLife">GitHub</a></span>
+        </div>
+        <span class="project-date">Jul 2026</span>
+      </div>
+      <div class="project-tech">React · Vite · Node.js · Express · PostgreSQL · JWT</div>
+      <div class="project-desc">Emergency response platform with one-tap SOS alerts and GPS geolocation, a live responder dashboard, and role-based JWT authentication. React/Vite frontend, Node.js/Express API, PostgreSQL, deployed on Render.</div>
+    </div>
+    <div class="project-divider"></div>
+
+    <!-- P4 · Roaming Sonic -->
     <div class="project-entry">
       <div class="project-top">
         <div class="project-name-group">
           <span class="project-name">Roaming Sonic — Travel &amp; Tour Management Platform</span>
+          <span class="project-links"><a href="https://github.com/Shiva-Prasad-Sarkar/Roaming-Sonic">GitHub</a> <a href="https://roaming-sonic.vercel.app/">Live</a></span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Shiva-Prasad-Sarkar/Roaming-Sonic">GitHub</a>
-          <a href="https://roaming-sonic.vercel.app/">Live</a>
-        </div>
+        <span class="project-date">Jan 2026</span>
       </div>
       <div class="project-tech">MongoDB · Express.js · React.js · Node.js · Vercel</div>
       <div class="project-desc">Full-stack MERN web platform for Bangladesh tourism featuring tour packages, hotel bookings, bus ticketing, guide services, AI chatbot, and referral rewards system. Live-deployed on Vercel.</div>
     </div>
     <div class="project-divider"></div>
 
-    <!-- P3 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Enterprise Network Simulation</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/End_Of_Experiment_CSE421">GitHub</a>
-        </div>
-      </div>
-      <div class="project-tech">Cisco Packet Tracer · VLSM · RIPv2 · DHCP · DNS · SMTP/POP3</div>
-      <div class="project-desc">Designed a multi-site hybrid enterprise network implementing VLSM subnetting, RIPv2 dynamic routing, static route redistribution, floating static routes for WAN failover, DHCP, DNS, and SMTP/POP3 email services.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P4 -->
+    <!-- P5 · Metadata Journal -->
     <div class="project-entry">
       <div class="project-top">
         <div class="project-name-group">
           <span class="project-name">Metadata Journal System</span>
+          <span class="project-links"><a href="https://github.com/Aditi-Adri/CSE321-metadata-journal">GitHub</a></span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/CSE321-metadata-journal">GitHub</a>
-        </div>
+        <span class="project-date">Jan 2026</span>
       </div>
       <div class="project-tech">C · Operating Systems</div>
       <div class="project-desc">OS-level implementation of file metadata management and journaling mechanisms to maintain filesystem consistency across crashes and concurrent access.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P5 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">RISC-V ISA Converter</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/RISC-V__ISA">GitHub</a>
-        </div>
-      </div>
-      <div class="project-tech">Python · RISC-V Architecture</div>
-      <div class="project-desc">Bidirectional converter between RISC-V 32-bit assembly instructions and binary/hexadecimal machine code representations, supporting all standard RISC-V instruction formats (R, I, S, B, U, J).</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P6 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">GapTime — Schedule Sync Tool</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/GapTime">GitHub</a>
-          <a href="https://aditi-adri.github.io/GapTime/">Live</a>
-        </div>
-      </div>
-      <div class="project-tech">React.js · JavaScript · GitHub Pages</div>
-      <div class="project-desc">React web application for finding and synchronizing free time gaps across multiple schedules. Deployed live on GitHub Pages.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P7 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">EcoGrow Nursery Management System</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/EcoGrow_CSE370_Project">GitHub</a>
-        </div>
-      </div>
-      <div class="project-tech">PHP · MySQL · HTML/CSS</div>
-      <div class="project-desc">Web-based management system for nursery order processing, event scheduling, and administrative control panel with role-based access.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P8 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Heart Disease Prediction — ML</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/heart-disease-prediction-using-ml">GitHub</a>
-        </div>
-      </div>
-      <div class="project-tech">Python · Scikit-Learn · Pandas · Matplotlib</div>
-      <div class="project-desc">Comparative study of Logistic Regression, SVM, Random Forest, and KNN classifiers for heart disease prediction using clinical patient data, with feature analysis and model evaluation.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P9 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Space Shooter &amp; Golden Rush — 3D OpenGL Games</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/Space_Shooter_OpenGL">Space Shooter</a>
-          <a href="https://github.com/Aditi-Adri/Golden_Rush_OpenGl">Golden Rush</a>
-        </div>
-      </div>
-      <div class="project-tech">Python · PyOpenGL · Real-Time Rendering</div>
-      <div class="project-desc">Two 3D games featuring enemy AI, collision detection, health systems, multiple camera perspectives, and real-time shader-based rendering built from scratch using PyOpenGL.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P10 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Minibank &amp; Micro-Bkash — Assembly Simulations</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/MINIBANK-EMU8086">Minibank</a>
-          <a href="https://github.com/Aditi-Adri/Micro_Bkash-8086">Micro-Bkash</a>
-        </div>
-      </div>
-      <div class="project-tech">x86 Assembly · Emu8086 · Microprocessor Systems</div>
-      <div class="project-desc">Two low-level simulations in Emu8086 assembly: a banking system with account management and a digital payment transaction simulator modelled on bKash.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P11 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Comparator &amp; Mixed-Signal Generator</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/DLD_Project_Comparator">Comparator</a>
-          <a href="https://github.com/Aditi-Adri/Mixed-Signal-Generator">Signal Gen</a>
-        </div>
-      </div>
-      <div class="project-tech">Digital Logic Design · Analog Electronics · Op-Amp Circuits</div>
-      <div class="project-desc">Designed and simulated a digital comparator circuit (DLD); separately built an op-amp based mixed-signal generator capable of producing square, triangular, and sine waveforms.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P12 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Web Utilities — QR Generator &amp; Speed-Time Calculator</span>
-        </div>
-        <div class="project-links">
-          <a href="https://aditi-adri.github.io/QR_generator/">QR Demo</a>
-          <a href="https://aditi-adri.github.io/Speed-Time-Calculator/">Speed Demo</a>
-        </div>
-      </div>
-      <div class="project-tech">HTML · JavaScript · GitHub Pages</div>
-      <div class="project-desc">Two lightweight browser tools deployed on GitHub Pages: an instant QR code generator for URLs/text, and a playback speed-to-duration calculator for media content.</div>
-    </div>
-    <div class="project-divider"></div>
-
-    <!-- P13 -->
-    <div class="project-entry">
-      <div class="project-top">
-        <div class="project-name-group">
-          <span class="project-name">Codeforces Solutions (Python)</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Aditi-Adri/Codeforces_Solution_Python">GitHub</a>
-        </div>
-      </div>
-      <div class="project-tech">Python · Competitive Programming</div>
-      <div class="project-desc">Ongoing collection of <strong>50+ Codeforces solutions</strong> (76+ commits) spanning beginner to intermediate difficulty, demonstrating consistent algorithmic problem-solving practice.</div>
     </div>
 
   </section>
@@ -550,8 +475,11 @@ section {
   <section>
     <div class="section-title">Experience &amp; Activities</div>
     <ul class="bullet-list">
-      <li>Competitive programming on Codeforces — 50+ problems solved in Python across multiple difficulty levels.</li>
+      <li><strong>Women &amp; Child Affairs Secretary</strong>, Executive Committee — Bangladesh Youngster Social Organization (BYSO), Dhaka District Unit, for the 2026–27 session. Leadership role supporting women's and children's welfare initiatives.</li>
+      <li>Competitive programming on Codeforces — 500+ problems solved in Python across multiple difficulty levels.</li>
       <li>Participation in university-level and inter-university programming contests at BRAC University.</li>
+      <li>Active volunteer in community and social-welfare activities.</li>
+      <li>Vocalist for cultural clubs and events at college and university.</li>
     </ul>
   </section>
 
@@ -559,15 +487,6 @@ section {
   <section>
     <div class="section-title">Interests</div>
     <p class="plain">Machine learning, image processing, computer graphics, competitive programming, full-stack web development, movies and TV series.</p>
-  </section>
-
-  <!-- ======== LOCATION ======== -->
-  <section>
-    <div class="section-title">Location</div>
-    <p class="plain">
-      <strong>Present:</strong> DIT Project, Merul Badda, Dhaka-1212 &nbsp;·&nbsp;
-      <strong>Permanent:</strong> 57/2, Kalirbajar, Narayanganj
-    </p>
   </section>
 
 </div>

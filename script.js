@@ -116,7 +116,7 @@
 
   // ── Fade-in on scroll ─────────────────────────────────
   var fadeEls = Array.from(document.querySelectorAll(
-    '.featured-card, .other-card, .edu-card, .about-stats, .skill-group, .contact-body'
+    '.featured-card, .other-card, .edu-card, .about-stats, .skill-group, .research-card, .contact-body'
   ));
 
   var fadeObserver = new IntersectionObserver(function (entries) {
@@ -164,5 +164,26 @@
         }
       });
     }
+  }
+
+  // ── Certificates carousel (2-up, arrow paging) ────────
+  var certVp   = document.getElementById('cert-viewport');
+  var certPrev = document.getElementById('cert-prev');
+  var certNext = document.getElementById('cert-next');
+  if (certVp && certPrev && certNext) {
+    var certSync = function () {
+      var max = certVp.scrollWidth - certVp.clientWidth - 2;
+      certPrev.disabled = certVp.scrollLeft <= 2;
+      certNext.disabled = certVp.scrollLeft >= max;
+    };
+    certPrev.addEventListener('click', function () {
+      certVp.scrollBy({ left: -certVp.clientWidth, behavior: 'smooth' });
+    });
+    certNext.addEventListener('click', function () {
+      certVp.scrollBy({ left: certVp.clientWidth, behavior: 'smooth' });
+    });
+    certVp.addEventListener('scroll', certSync, { passive: true });
+    window.addEventListener('resize', certSync);
+    certSync();
   }
 })();
