@@ -232,6 +232,28 @@ section {
 .plain strong { color: #0f172a; font-weight: 600; }
 
 /* =====================
+   REFERENCES
+   ===================== */
+.ref-entries { display: flex; flex-direction: column; gap: 5pt; }
+
+.ref-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.ref-left  { flex: 1; }
+.ref-right { text-align: right; min-width: 96pt; flex-shrink: 0; }
+
+.ref-name  { font-size: 9.5pt; font-weight: 600; color: #0f172a; }
+.ref-affil { font-size: 9pt; color: #334155; margin-top: 1pt; }
+.ref-email { font-size: 8.5pt; margin-top: 1pt; }
+.ref-email a { color: #1e40af; text-decoration: none; }
+.ref-role  { font-size: 8.5pt; color: #64748b; font-style: italic; }
+
+/* =====================
    PRINT OVERRIDES
    ===================== */
 @media print {
@@ -487,6 +509,32 @@ section {
   <section>
     <div class="section-title">Interests</div>
     <p class="plain">Machine learning, image processing, computer graphics, competitive programming, full-stack web development, movies and TV series.</p>
+  </section>
+
+  <!-- ======== REFERENCES ======== -->
+  <section>
+    <div class="section-title">References</div>
+    <div class="ref-entries">
+
+      <div class="ref-entry">
+        <div class="ref-left">
+          <div class="ref-name">Upal Aditya Oikya, PhD</div>
+          <div class="ref-affil">School of Law, BRAC University, Dhaka, Bangladesh</div>
+          <div class="ref-email"><a href="mailto:aditya.oikya@bracu.ac.bd">aditya.oikya@bracu.ac.bd</a></div>
+        </div>
+        <div class="ref-right"><div class="ref-role">Assistant Professor</div></div>
+      </div>
+
+      <div class="ref-entry">
+        <div class="ref-left">
+          <div class="ref-name">Ipshita Bonhi Upoma</div>
+          <div class="ref-affil">Department of Computer Science and Engineering, BRAC University, Dhaka, Bangladesh</div>
+          <div class="ref-email"><a href="mailto:ipshita.upoma@bracu.ac.bd">ipshita.upoma@bracu.ac.bd</a></div>
+        </div>
+        <div class="ref-right"><div class="ref-role">Lecturer</div></div>
+      </div>
+
+    </div>
   </section>
 
 </div>

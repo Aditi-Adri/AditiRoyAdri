@@ -1,20 +1,60 @@
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
 \usepackage{parskip}
 
+% ---- Colour Palette (matches cv.html) ----
+\definecolor{cvnavy}{HTML}{0F172A}    % name, strong headings
+\definecolor{cvaccent}{HTML}{1E40AF}  % section titles, links
+\definecolor{cvrule}{HTML}{BFDBFE}    % section underline
+\definecolor{cvmuted}{HTML}{64748B}   % dates, secondary text
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = cvaccent,
+  linkcolor  = cvaccent,
+  pdftitle   = {Aditi Roy Adri --- Curriculum Vitae},
+  pdfauthor  = {Aditi Roy Adri},
+  pdfsubject = {Curriculum Vitae},
+  pdfkeywords= {Computer Vision, Machine Learning, Deep Learning, PyTorch,
+                YOLO, U-Net, Image Segmentation, Object Detection, Python,
+                C++, Full-Stack Development, BRAC University}
+}
+\urlstyle{same}
+
+% ---- Correct Unicode extraction (ATS / copy-paste); pdfLaTeX only ----
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
 % ---- Section Formatting ----
-\titleformat{\section}{
-  \large\bfseries
-}{}{0em}{}[\titlerule]
+\titleformat{\section}
+  {\large\bfseries\color{cvaccent}}
+  {}{0em}{}
+  [{\color{cvrule}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{12pt}{5pt}
+
+% ---- Typographic hygiene ----
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\emergencystretch}{1em}
+
+% ---- Muted date / designation stamp ----
+\newcommand{\cvmeta}[1]{\textcolor{cvmuted}{\textit{#1}}}
 
 \begin{document}
 
 \begin{center}
-    {\LARGE \textbf{Aditi Roy Adri}}\\[4pt]
+    {\LARGE\bfseries\color{cvnavy} Aditi Roy Adri}\\[4pt]
     \href{mailto:aditiroyadri121@gmail.com}{aditiroyadri121@gmail.com}\\[3pt]
     \href{https://www.linkedin.com/in/aditi-roy-adri-33b817323/}{LinkedIn} $|$
     \href{https://github.com/Aditi-Adri}{GitHub} $|$
@@ -29,13 +69,13 @@ Motivated Computer Science and Engineering student at BRAC University with a str
 % ---- Education ----
 \section*{Education}
 \begin{itemize}[leftmargin=*, itemsep=6pt]
-    \item \textbf{BRAC University, Dhaka} \hfill \textit{2023 -- 2026}\\
+    \item \textbf{BRAC University, Dhaka} \hfill \cvmeta{2023 -- 2026}\\
     Bachelor of Science in Computer Science and Engineering \hfill \textbf{CGPA:} 3.84
 
-    \item \textbf{Holy Cross College, Dhaka} \hfill \textit{2021}\\
+    \item \textbf{Holy Cross College, Dhaka} \hfill \cvmeta{2021}\\
     Higher Secondary Certificate (HSC) \hfill \textbf{GPA:} 5.00
 
-    \item \textbf{Narayanganj High School and College, Narayanganj} \hfill \textit{2019}\\
+    \item \textbf{Narayanganj High School and College, Narayanganj} \hfill \cvmeta{2019}\\
     Secondary School Certificate (SSC) \hfill \textbf{GPA:} 5.00
 \end{itemize}
 
@@ -56,23 +96,23 @@ Motivated Computer Science and Engineering student at BRAC University with a str
 \section*{Projects}
 \begin{itemize}[leftmargin=*, itemsep=8pt]
 
-    \item \textbf{CARDD -- Car Damage Detection with YOLO} \hfill \textit{Jun 2026}\\
+    \item \textbf{CARDD -- Car Damage Detection with YOLO} \hfill \cvmeta{Jun 2026}\\
     Trained and benchmarked YOLO11-L against YOLOv8-L on the CarDD dataset (4,000 images, 8,740 annotated boxes across 6 damage classes: scratches, dents, cracks, broken lamps, shattered glass, flat tires). YOLO11-L achieved \textbf{mAP@50--95 of 0.557}.\\
     \textbf{Tech:} Python, YOLO11, YOLOv8, PyTorch, Object Detection \quad \href{https://github.com/Aditi-Adri/CARDD---Car-Damage-Detection-with-YOLO}{GitHub}
 
-    \item \textbf{Pet Image Segmentation \& Breed Classification (U-Net)} \hfill \textit{May 2026}\\
+    \item \textbf{Pet Image Segmentation \& Breed Classification (U-Net)} \hfill \cvmeta{May 2026}\\
     Deep learning project using U-Net and Attention U-Net architectures for binary pet image segmentation and 37-breed classification on the Oxford-IIIT Pet Dataset. Achieved \textbf{$\sim$88\% IoU} with a pretrained ResNet-34 encoder. Implemented data augmentation, combined loss functions, and ablation studies.\\
     \textbf{Tech:} Python, PyTorch, Jupyter Notebook \quad \href{https://github.com/Aditi-Adri/Image-Processing-Project---pet-segmentation-classification-unet-CSE428}{GitHub}
 
-    \item \textbf{SaveLife -- SOS Emergency Response App} \hfill \textit{Jul 2026}\\
+    \item \textbf{SaveLife -- SOS Emergency Response App} \hfill \cvmeta{Jul 2026}\\
     Emergency response platform with one-tap SOS alerts and GPS geolocation, a live responder dashboard, and role-based JWT authentication. React/Vite frontend, Node.js/Express API, PostgreSQL, deployed on Render.\\
     \textbf{Tech:} React, Vite, Node.js, Express, PostgreSQL, JWT \quad \href{https://github.com/Aditi-Adri/SaveLife}{GitHub}
 
-    \item \textbf{Roaming Sonic -- Travel \& Tour Management Platform} \hfill \textit{Jan 2026}\\
+    \item \textbf{Roaming Sonic -- Travel \& Tour Management Platform} \hfill \cvmeta{Jan 2026}\\
     Full-stack MERN web application for Bangladesh tourism featuring tour packages, hotel bookings, bus tickets, guide services, AI chatbot, and referral rewards system. Live-deployed on Vercel.\\
     \textbf{Tech:} MongoDB, Express.js, React.js, Node.js \quad \href{https://github.com/Shiva-Prasad-Sarkar/Roaming-Sonic}{GitHub} $|$ \href{https://roaming-sonic.vercel.app/}{Live Demo}
 
-    \item \textbf{Metadata Journal System} \hfill \textit{Jan 2026}\\
+    \item \textbf{Metadata Journal System} \hfill \cvmeta{Jan 2026}\\
     OS-level project implementing file metadata management and journaling mechanisms for maintaining filesystem consistency.\\
     \textbf{Tech:} C \quad \href{https://github.com/Aditi-Adri/CSE321-metadata-journal}{GitHub}
 
@@ -81,7 +121,7 @@ Motivated Computer Science and Engineering student at BRAC University with a str
 % ---- Experience ----
 \section*{Experience \& Activities}
 \begin{itemize}[leftmargin=1.2em, labelsep=0.4em, itemsep=3pt, topsep=3pt]
-    \item \textbf{Women \& Child Affairs Secretary}, Executive Committee --- Bangladesh Youngster Social Organization (BYSO), Dhaka District Unit, for the 2026--27 session. Leadership role supporting women's and children's welfare initiatives.
+    \item {Women \& Child Affairs Secretary}, Executive Committee --- Bangladesh Youngster Social Organization (BYSO), Dhaka District Unit, for the 2026--27 session. Leadership role supporting women's and children's welfare initiatives.
     \item Competitive programming on Codeforces (500+ problems solved in Python).
     \item Participation in university-level and inter-university programming contests at BRAC University.
     \item Active volunteer in community and social-welfare activities.
@@ -91,5 +131,17 @@ Motivated Computer Science and Engineering student at BRAC University with a str
 % ---- Interests ----
 \section*{Interests}
 Machine learning, image processing, computer graphics, competitive programming, full-stack web development, movies and TV series.
+
+% ---- References ----
+\section*{References}
+\begin{itemize}[leftmargin=*, itemsep=6pt]
+    \item \textbf{Upal Aditya Oikya, PhD} \hfill \cvmeta{Assistant Professor}\\
+    School of Law, BRAC University, Dhaka, Bangladesh\\
+    \href{mailto:aditya.oikya@bracu.ac.bd}{aditya.oikya@bracu.ac.bd}
+
+    \item \textbf{Ipshita Bonhi Upoma} \hfill \cvmeta{Lecturer}\\
+    Department of Computer Science and Engineering, BRAC University, Dhaka, Bangladesh\\
+    \href{mailto:ipshita.upoma@bracu.ac.bd}{ipshita.upoma@bracu.ac.bd}
+\end{itemize}
 
 \end{document}
