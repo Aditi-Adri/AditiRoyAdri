@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020c1b"/><stop offset="1" stop-color="#050f22"/>
+    </linearGradient>
+    <radialGradient id="heat" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00c8ff" stop-opacity="0.35"/><stop offset="1" stop-color="#00c8ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="160" fill="url(#bg)"/>
+  <text x="140" y="22" font-family="'Courier New',monospace" font-size="11" text-anchor="middle" fill="#00c8ff" font-weight="bold" letter-spacing="1">HIRELOCAL</text>
+
+  <rect x="16" y="32" width="150" height="76" rx="4" fill="#0a4a8a" fill-opacity="0.16" stroke="#1a7fd4" stroke-width="1" opacity="0.7"/>
+  <path d="M16 56 L166 56 M16 84 L166 84 M66 32 L66 108 M116 32 L116 108" stroke="#1a7fd4" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="92" cy="70" r="26" fill="url(#heat)"/>
+  <circle cx="46" cy="48" r="18" fill="url(#heat)"/>
+
+  <path d="M92 62 a7 7 0 0 1 7 7 c0 5-7 13-7 13 s-7-8-7-13 a7 7 0 0 1 7-7 z" fill="#00c8ff" opacity="0.9"/>
+  <circle cx="92" cy="69" r="2.6" fill="#020c1b"/>
+  <path d="M46 42 a5.5 5.5 0 0 1 5.5 5.5 c0 4-5.5 10-5.5 10 s-5.5-6-5.5-10 a5.5 5.5 0 0 1 5.5-5.5 z" fill="#a78bfa" opacity="0.85"/>
+  <circle cx="46" cy="47.5" r="2" fill="#020c1b"/>
+  <path d="M138 88 a5.5 5.5 0 0 1 5.5 5.5 c0 4-5.5 10-5.5 10 s-5.5-6-5.5-10 a5.5 5.5 0 0 1 5.5-5.5 z" fill="#a78bfa" opacity="0.7"/>
+  <circle cx="138" cy="93.5" r="2" fill="#020c1b"/>
+
+  <rect x="176" y="32" width="88" height="34" rx="4" fill="#0a4a8a" fill-opacity="0.25" stroke="#00c8ff" stroke-width="1" opacity="0.8"/>
+  <circle cx="192" cy="49" r="9" fill="none" stroke="#00c8ff" stroke-width="1.6"/>
+  <text x="192" y="52" font-family="monospace" font-size="8" text-anchor="middle" fill="#00c8ff" font-weight="bold">87</text>
+  <text x="230" y="46" font-family="monospace" font-size="7" text-anchor="middle" fill="#7fd3ff">TrustScore</text>
+  <text x="230" y="57" font-family="monospace" font-size="6.5" text-anchor="middle" fill="#8aa6c8">verified tier 3</text>
+
+  <rect x="176" y="72" width="88" height="17" rx="3" fill="#a78bfa" opacity="0.85"/>
+  <text x="220" y="84" font-family="monospace" font-size="7" text-anchor="middle" fill="white">live tracking</text>
+  <rect x="176" y="93" width="88" height="15" rx="3" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.7"/>
+  <text x="220" y="104" font-family="monospace" font-size="7" text-anchor="middle" fill="#a78bfa">arrival code</text>
+
+  <text x="140" y="122" font-family="monospace" font-size="7.5" text-anchor="middle" fill="#8aa6c8">technician marketplace  ::  Dhaka</text>
+
+  <rect x="14" y="133" width="52" height="16" rx="3" fill="none" stroke="#00c8ff" stroke-width="1" opacity="0.7"/>
+  <rect x="74" y="133" width="46" height="16" rx="3" fill="none" stroke="#00c8ff" stroke-width="1" opacity="0.7"/>
+  <rect x="128" y="133" width="52" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.7"/>
+  <rect x="188" y="133" width="68" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.7"/>
+  <text x="40" y="145" font-family="monospace" font-size="8" text-anchor="middle" fill="#00c8ff">Next.js</text>
+  <text x="97" y="145" font-family="monospace" font-size="8" text-anchor="middle" fill="#00c8ff">Prisma</text>
+  <text x="154" y="145" font-family="monospace" font-size="8" text-anchor="middle" fill="#a78bfa">Socket.IO</text>
+  <text x="222" y="145" font-family="monospace" font-size="8" text-anchor="middle" fill="#a78bfa">PostgreSQL</text>
+</svg>
