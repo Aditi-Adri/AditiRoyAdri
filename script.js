@@ -137,7 +137,7 @@
   var featuredList = document.querySelector('.featured-list');
   if (featuredList) {
     var allCards = Array.from(featuredList.querySelectorAll('.featured-card'));
-    var PER_PAGE = 4;
+    var PER_PAGE = 6;
     if (allCards.length > PER_PAGE) {
       var shownCount = PER_PAGE;
       // Hide cards beyond first 4; remove fade-item so opacity doesn't conflict
