@@ -293,7 +293,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .mobile-menu.open {
-  max-height: 360px;
+  max-height: 520px;
 }
 
 .mobile-link {
@@ -310,6 +310,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .mobile-link:last-child { border-bottom: none; }
 .mobile-link:hover { color: var(--accent); background: var(--accent-dim); }
+
+/* Resume entry in the mobile dropdown */
+.mobile-cv { color: var(--accent); }
 
 /* ════════════════════════════════════════════════════════
    MAIN / LAYOUT
@@ -1156,8 +1159,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    RESPONSIVE — MOBILE
    ════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .topnav-links,
-  .topnav-actions { display: none; }
+  .topnav-links { display: none; }
+  /* keep the theme toggle reachable on mobile; Resume moves into the dropdown */
+  .topnav-actions { display: flex; }
+  .topnav-actions .cv-btn { display: none; }
   .hamburger { display: flex; }
 
   .topnav-inner { padding: 0 1.25rem; }
